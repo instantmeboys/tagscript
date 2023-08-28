@@ -12,7 +12,7 @@ You can add '.tagscript' as a valid file extension with this extension! By chang
 git clone https://github.com/instantmeboys/tagscript.git
 cd tagscript
 vsce package
-```sh
+```
 
 ## Release Notes
 
