@@ -47,6 +47,10 @@
             "name": "keyword.tag"
         },
         {
+            "match": "{if",
+            "name": "keyword.tag"
+        },
+        {
             "match": "{nick}",
             "name": "keyword.tag"
         },
