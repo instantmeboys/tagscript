@@ -27,7 +27,15 @@
             "name": "comment.block.note.tag"
         },
         {
+            "match": "{tagname}",
+            "name": "keyword.tag"
+        },
+        {
             "match": "{args}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{name}",
             "name": "keyword.tag"
         },
         {
@@ -40,6 +48,14 @@
         },
         {
             "match": "{server}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{media}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{audio}",
             "name": "keyword.tag"
         },
         {
@@ -119,7 +135,83 @@
             "name": "keyword.tag"
         },
         {
+            "match": "{guildcount}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{guild}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{guildid}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{search.g.images:",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{s.g.images:",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{iscript:",
+            "name": "code.tag"
+        },
+        {
+            "match": "{mediascript:",
+            "name": "code.tag"
+        },
+        {
+            "match": "{imagescript:",
+            "name": "code.tag"
+        },
+        {
+            "match": "{mscript:",
+            "name": "code.tag"
+        },
+        {
+            "match": "{max:",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{min:",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{video:",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{video}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{pi}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{mention}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{mention:",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{randchannelmention}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{membercount}",
+            "name": "keyword.tag"
+        },
+        {
             "match": "{ocr}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{ocr:",
             "name": "keyword.tag"
         },
         {
@@ -128,6 +220,14 @@
         },
         {
             "match": "{prefix}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{url:",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{userid}",
             "name": "keyword.tag"
         },
         {
@@ -151,6 +251,10 @@
             "name": "keyword.tag"
         },
         {
+            "match": "{reverse:",
+            "name": "keyword.tag"
+        },
+        {
             "match": "{replycontent}",
             "name": "keyword.tag"
         },
@@ -164,6 +268,10 @@
         },
         {
             "match": "{download:",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{randonlinetag}",
             "name": "keyword.tag"
         },
         {
@@ -249,6 +357,7 @@
             }
         },
     
+    
         {
             "match": "{range:(.*?)}",
             "name": "multikeyword.tag",
@@ -264,6 +373,10 @@
         },
         {
             "match": "{replace:",
+            "name": "multikeyword.tag"
+        },
+        {
+            "match": "{repeat:",
             "name": "multikeyword.tag"
         }
     ],
