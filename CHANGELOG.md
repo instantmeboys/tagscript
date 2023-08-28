@@ -1,9 +1,6 @@
 # Change Log
 
-All notable changes to the "tagscript" extension will be documented in this file.
+## 0.0.3
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+- Added few extra commands.
+- Made the syntax colors less brighter.

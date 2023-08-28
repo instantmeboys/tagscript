@@ -4,7 +4,7 @@
   "description": "",
   "publisher": "Ramen",
   "icon": "./resize.png",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.81.0"
   },
@@ -25,12 +25,6 @@
           "id": "tagscript",
           "extensions": [".tagscript", ".tag"],
           "configuration": "./tagscript-configuration.json"
-      }
-    ],
-    "commands": [
-      {
-        "command": "tagscript.helloWorld",
-        "title": "Hello World"
       }
     ],
     "grammars": [

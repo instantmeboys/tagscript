@@ -14,7 +14,7 @@
                 "multikeyword.tag"
             ],
             "settings": {
-                "foreground": "#b30086"
+                "foreground": "#D681D6"
             }
         },
         {
@@ -22,7 +22,7 @@
                 "multikeyword.content"
             ],
             "settings": {
-                "foreground": "#33cc33"
+                "foreground": "#00BFFF"
             }
         },
         {
@@ -46,7 +46,7 @@
                 "choose.tag"
             ],
             "settings": {
-                "foreground": "#e6e600"
+                "foreground": "#FFFF99"
             }
         },
         {
@@ -54,7 +54,7 @@
                 "choose.content"
             ],
             "settings": {
-                "foreground": "#33cc33"
+                "foreground": "#00BFFF"
             }
         },
         {
@@ -79,6 +79,14 @@
             ],
             "settings": {
                 "foreground": "#4dc3ff"
+            }
+        },
+        {
+            "scope": [
+                "code.tag"
+            ],
+            "settings": {
+                "foreground": "#FFD700"
             }
         }
     ]
