@@ -1,6 +1,6 @@
 *.vsix
 node_modules/
 .vscode/
-/dist/
-/out/
-/build/
+dist/
+out/
+build/
