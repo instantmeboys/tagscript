@@ -1,0 +1,179 @@
+{
+    "name": "tagscript",
+    "scopeName": "source.tagscript",
+    "fileTypes": [
+        ".tagscript",
+        ".tag"
+    ],
+    "patterns": [
+        {
+            "match": "\\|=\\|",
+            "name": "comparison.tag"
+        },      
+        {
+            "match": "\\|~\\|",
+            "name": "comparison.tag"
+        },     
+        {
+            "match": "\\|<\\|",
+            "name": "comparison.tag"
+        },      
+        {
+            "match": "\\|>\\|",
+            "name": "comparison.tag"
+        },    
+        {
+            "match": "{note:.*?}",
+            "name": "comment.block.note.tag"
+        },
+        {
+            "match": "{args}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{argslen}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{avatar}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{server}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{id}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{nick}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{servercount}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{serverid}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{channel}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{channelid}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{arg:[0-9]+}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{randmessageid}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{randonline}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{lattach}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{ocr}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{newline}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{replycontent}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{randonlineid}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{set:",
+            "name": "variable.tag"
+        },
+        {
+            "match": "{get:(.*?)}",
+            "name": "variable.tag",
+            "captures": {
+                "1": {
+                    "name": "variable.content"
+                }
+            }
+        },
+        {
+            "match": "{text:(.*?)}",
+            "name": "multikeyword.tag",
+            "captures": {
+                "1": {
+                    "name": "multikeyword.content"
+                }
+            }
+        },
+        {
+            "match": "{messagecontent:(.*?)}",
+            "name": "multikeyword.tag",
+            "captures": {
+                "1": {
+                    "name": "multikeyword.content"
+                }
+            }
+        },
+        {
+            "match": "{length:(.*?)}",
+            "name": "multikeyword.tag",
+            "captures": {
+                "1": {
+                    "name": "multikeyword.content"
+                }
+            }
+        },
+        {
+            "match": "{len:(.*?)}",
+            "name": "multikeyword.tag",
+            "captures": {
+                "1": {
+                    "name": "multikeyword.content"
+                }
+            }
+        },       
+        {
+            "match": "{choose:(.*?)}",
+            "name": "choose.tag",
+            "captures": {
+                "1": {
+                    "name": "choose.content"
+                }
+            }
+        },
+    
+        {
+            "match": "{range:(.*?)}",
+            "name": "multikeyword.tag",
+            "captures": {
+                "1": {
+                    "name": "multikeyword.content"
+                }
+            }
+        },
+        {
+            "match": "\\|",
+            "name": "separator.tag"
+        },
+        {
+            "match": "{replace:",
+            "name": "multikeyword.tag"
+        }
+    ],
+    "repository": {}
+}
