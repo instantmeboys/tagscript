@@ -1,0 +1,85 @@
+{
+    "name": "Tagscript Theme",
+    "settings": [
+        {
+            "scope": [
+                "keyword.tag"
+            ],
+            "settings": {
+                "foreground": "#00cc99"
+            }
+        },
+        {
+            "scope": [
+                "multikeyword.tag"
+            ],
+            "settings": {
+                "foreground": "#b30086"
+            }
+        },
+        {
+            "scope": [
+                "multikeyword.content"
+            ],
+            "settings": {
+                "foreground": "#33cc33"
+            }
+        },
+        {
+            "scope": [
+                "comment.block.note.tag"
+            ],
+            "settings": {
+                "foreground": "#808080"
+            }
+        },
+        {
+            "scope": [
+                "variable.tag"
+            ],
+            "settings": {
+                "foreground": "#1E90FF"
+            }
+        },
+        {
+            "scope": [
+                "choose.tag"
+            ],
+            "settings": {
+                "foreground": "#e6e600"
+            }
+        },
+        {
+            "scope": [
+                "choose.content"
+            ],
+            "settings": {
+                "foreground": "#33cc33"
+            }
+        },
+        {
+            "scope": [
+                "separator.tag"
+            ],
+            "settings": {
+                "foreground": "#0066ff"
+            }
+        },
+        {
+            "scope": [
+                "variable.content"
+            ],
+            "settings": {
+                "foreground": "#cc6600"
+            }
+        },
+        {
+            "scope": [
+                "comparison.tag"
+            ],
+            "settings": {
+                "foreground": "#4dc3ff"
+            }
+        }
+    ]
+}
