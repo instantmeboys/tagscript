@@ -227,11 +227,27 @@
             "name": "keyword.tag"
         },
         {
-            "match": "{userid}",
+            "match": "{userid:",
             "name": "keyword.tag"
         },
         {
             "match": "{randuser}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{randusertag}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{usertag}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{usertag:",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{userid}",
             "name": "keyword.tag"
         },
         {
