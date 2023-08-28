@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.0.4
+
+- Added hover commands.
+- Finished highlighting all of the frequently used syntax 
+
 ## 0.0.3
 
 - Added few extra commands.
