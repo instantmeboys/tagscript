@@ -8,9 +8,11 @@ You can add '.tagscript' as a valid file extension with this extension! By chang
 
 ## Compile from source:
 
+```sh
 git clone https://github.com/instantmeboys/tagscript.git
 cd tagscript
 vsce package
+```sh
 
 ## Release Notes
 
