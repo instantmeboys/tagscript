@@ -43,7 +43,7 @@
     "themes": [
       {
           "label": "Tagscript Theme",
-          "uiTheme": "hc-black" ,
+          "uiTheme": "vs-dark",
           "path": "./tagscript.tmTheme.json"
       }
     ]
