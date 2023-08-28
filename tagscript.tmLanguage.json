@@ -47,6 +47,10 @@
             "name": "keyword.tag"
         },
         {
+            "match": "{substring:",
+            "name": "keyword.tag"
+        },
+        {
             "match": "{id:",
             "name": "keyword.tag"
         },
@@ -56,6 +60,18 @@
         },
         {
             "match": "{eval:",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{translate:",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{mathsilent:",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{jsonify:",
             "name": "keyword.tag"
         },
         {
@@ -95,6 +111,10 @@
             "name": "keyword.tag"
         },
         {
+            "match": "{attach:",
+            "name": "keyword.tag"
+        },
+        {
             "match": "{lattach}",
             "name": "keyword.tag"
         },
@@ -107,7 +127,39 @@
             "name": "keyword.tag"
         },
         {
+            "match": "{prefix}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{randuser}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{attachtext:",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{math:",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{iv}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{code:",
+            "name": "keyword.tag"
+        },
+        {
             "match": "{replycontent}",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{delete:",
+            "name": "keyword.tag"
+        },
+        {
+            "match": "{download:",
             "name": "keyword.tag"
         },
         {
