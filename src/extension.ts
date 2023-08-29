@@ -2,6 +2,88 @@ import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
     console.log("Activated TagScript TypeScript");
+
+    context.subscriptions.push(vscode.languages.registerCompletionItemProvider('tagscript', {
+        provideCompletionItems(document, position, token, context) {
+            const line = document.lineAt(position.line).text;
+            const beforeWord = line.substring(0, position.character);
+
+            const completionItems = [];
+
+            const keywords = [
+                { keyword: "translate", title: "{translate:toTranslate|en}", snippet: "translate:toTranslate|en" },
+                { keyword: "repeat", title: "{repeat:10|text}",snippet: "repeat:10|text" },
+                { keyword: "replace", title: "{replace:toReplace|replacedText|text}", snippet: "replace:toReplace|replacedText|text" },
+                { keyword: "if", title: "{if:test|=|test|then: |else: }", snippet: "if:test|=|test|then: |else: " },
+                { keyword: "range", title: "{range:min|max}", snippet: "range:1|10" },
+                { keyword: "set", title: "{set:variable|value}", snippet: "set:variable|value" },
+                { keyword: "get", title: "{get|var}", snippet: "get|var" },
+                { keyword: "user", title: "{user}", snippet: "user" },
+                { keyword: "server", title: "{server}", snippet: "server" },
+                { keyword: "args", title: "{args}", snippet: "args" },
+                { keyword: "arg", title: "{arg:0}", snippet: "arg:0" },
+                { keyword: "argslen", title: "{argslen}", snippet: "argslen" },
+                { keyword: "randuser", title: "{randuser}", snippet: "randuser" },
+                { keyword: "note", title: "{note:text}", snippet: "note:text" },
+                { keyword: "servercount", title: "{servercount}", snippet: "servercount" },
+                { keyword: "serverid", title: "{serverid}", snippet: "serverid" },
+                { keyword: "randuserid", title: "{randuserid}", snippet: "randuserid" },
+                { keyword: "randonline", title: "{randonline}", snippet: "randonline" },
+                { keyword: "channel", title: "{channel}", snippet: "channel" },
+                { keyword: "channelid", title: "{channelid}", snippet: "channelid" },
+                { keyword: "newline", title: "{newline}", snippet: "newline" },
+                { keyword: "tagname", title: "{tagname}", snippet: "tagname" },
+                { keyword: "ocr", title: "{ocr}", snippet: "ocr" },
+                { keyword: "randmessageid", title: "{randmessageid}", snippet: "randmessageid" },
+                { keyword: "math", title: "{math:2+2}", snippet: "math:2+2" },
+                { keyword: "eval", title: "{eval:text}", snippet: "eval:text" },
+                { keyword: "length", title: "{length:text}", snippet: "length:text" },
+                { keyword: "replycontent", title: "{replycontent}", snippet: "replycontent" },
+                { keyword: "replyuserid", title: "{replyuserid}", snippet: "replyuserid" },
+                { keyword: "messageuserid", title: "{messageuserid:MESSAGE_ID}", snippet: "messageuserid:MESSAGE_ID" },
+                { keyword: "pi", title: "{pi}", snippet: "pi" },
+                { keyword: "text", title: "{text:URL}", snippet: "text:URL" },
+                { keyword: "lattach", title: "{lattach}", snippet: "lattach" },
+                { keyword: "lower", title: "{lower:TEXT}", snippet: "lower:TEXT" },
+                { keyword: "upper", title: "{upper:text}", snippet: "upper:text" },
+                { keyword: "code", title: "{code:block}", snippet: "code:block" },
+                { keyword: "substring", title: "{substring:text|start|end}", snippet: "substring:text|start|end" },
+                { keyword: "jsonify", title: "{jsonify:text}", snippet: "jsonify:text"},
+                { keyword: "messagecontent", title: "{messagecontent:MESSAGE_ID}", snippet: "messagecontent:MESSAGE_ID"},
+                { keyword: "avatar", title: "{avatar}", snippet: "avatar"},
+                { keyword: "nick", title: "{nick}", snippet: "nick"},
+                { keyword: "mention", title: "{mention:user}", snippet: "mention:user"},
+                { keyword: "randchannel", title: "{randchannel}", snippet: "randchannel"},
+                { keyword: "download", title: "{download:URL}", snippet: "download:URL"},
+                { keyword: "search.google.images", title: "{search.google.images:PAGE|search}", snippet: "search.google.images:random|search"},
+                { keyword: "ignore", title: "{ignore:text}", snippet: "ignore:text"},
+                { keyword: "settings", title: "{settings:SETTING|VALUE}", snippet: "settings:SETTING|VALUE"}
+            ];  // List of keywords and their associated snippets
+
+            for (const keywordData of keywords) {
+                const keyword = keywordData.keyword;
+                const title = keywordData.title;
+                const snippet = keywordData.snippet;
+
+                for (let i = 1; i <= keyword.length; i++) {
+                    const pattern = keyword.substring(0, i);
+                    if (beforeWord.endsWith(pattern)) {
+                        const completionItem = new vscode.CompletionItem(title, vscode.CompletionItemKind.Keyword);
+                        completionItem.filterText = pattern;
+                        completionItem.insertText = new vscode.SnippetString(snippet);
+                        completionItem.documentation = new vscode.MarkdownString('Documentation for ' + keyword);
+                        completionItems.push(completionItem);
+                        break; 
+                    }
+                }
+            }
+
+            return completionItems;
+        }
+    }));
+
+
+
     context.subscriptions.push(vscode.languages.registerHoverProvider('tagscript', {
         provideHover(document, position, token) {
             const range = document.getWordRangeAtPosition(position);
@@ -12,7 +94,7 @@ export function activate(context: vscode.ExtensionContext) {
                     contents: [
                         '{replace:with|to|in}',
                         'The text that matches **with** in **in** will be replaced to **to**, you can nest replace functions.'
-                ]
+                    ]
                 };
             } else if (word === 'args') {
                 return {

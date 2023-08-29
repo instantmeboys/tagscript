@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.0.5
+
+- Added autocompletion
+- Added some more hovers
+
 ## 0.0.4
 
 - Added hover commands.

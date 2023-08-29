@@ -4,7 +4,8 @@ TagScript is a programming language for NotSoBot!
 
 ## Features
 
-You can add '.tagscript' as a valid file extension with this extension! By changing the color theme to TagScript's color theme, you can edit TagScript code as easy as ever!
+You can add '.tagscript' and '.tag' as a valid file extension with this extension! By changing the color theme to TagScript's color theme, you can edit TagScript code easily.
+This extension features autocompletion, syntax highlighting and hover information.
 
 ## Compile from source
 
