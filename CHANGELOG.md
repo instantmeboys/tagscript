@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.0.6
+
+- Fixed {get|variable} into {get:variable}
+- Added {attach:URL} and {attachtext:text} to the autocompletion
+
 ## 0.0.5
 
 - Added autocompletion
