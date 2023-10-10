@@ -17,7 +17,7 @@ export function activate(context: vscode.ExtensionContext) {
                 { keyword: "if", title: "{if:test|=|test|then: |else: }", snippet: "if:test|=|test|then: |else: " },
                 { keyword: "range", title: "{range:min|max}", snippet: "range:1|10" },
                 { keyword: "set", title: "{set:variable|value}", snippet: "set:variable|value" },
-                { keyword: "get", title: "{get|var}", snippet: "get|var" },
+                { keyword: "get", title: "{get:var}", snippet: "get|var" },
                 { keyword: "user", title: "{user}", snippet: "user" },
                 { keyword: "server", title: "{server}", snippet: "server" },
                 { keyword: "args", title: "{args}", snippet: "args" },
@@ -57,6 +57,8 @@ export function activate(context: vscode.ExtensionContext) {
                 { keyword: "download", title: "{download:URL}", snippet: "download:URL"},
                 { keyword: "search.google.images", title: "{search.google.images:PAGE|search}", snippet: "search.google.images:random|search"},
                 { keyword: "ignore", title: "{ignore:text}", snippet: "ignore:text"},
+                { keyword: "attach", title: "{attach:URL}", snippet: "attach:URL"},
+                { keyword: "attachtext", title: "{attachtext:text}", snippet: "attachtext:text"},
                 { keyword: "settings", title: "{settings:SETTING|VALUE}", snippet: "settings:SETTING|VALUE"}
             ];  // List of keywords and their associated snippets
 
@@ -67,7 +69,7 @@ export function activate(context: vscode.ExtensionContext) {
 
                 for (let i = 1; i <= keyword.length; i++) {
                     const pattern = keyword.substring(0, i);
-                    if (beforeWord.endsWith(pattern)) {
+                    if (beforeWord.endsWith("{" + pattern)) {
                         const completionItem = new vscode.CompletionItem(title, vscode.CompletionItemKind.Keyword);
                         completionItem.filterText = pattern;
                         completionItem.insertText = new vscode.SnippetString(snippet);
