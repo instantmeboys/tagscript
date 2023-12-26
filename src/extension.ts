@@ -11,7 +11,7 @@ export function activate(context: vscode.ExtensionContext) {
             const completionItems = [];
 
             const keywords = [
-                { keyword: "translate", title: "{translate:toTranslate|en}", snippet: "translate:toTranslate|en" },
+                { keyword: "translate", title: "{translate:text|en}", snippet: "translate:text|en" },
                 { keyword: "repeat", title: "{repeat:10|text}",snippet: "repeat:10|text" },
                 { keyword: "replace", title: "{replace:toReplace|replacedText|text}", snippet: "replace:toReplace|replacedText|text" },
                 { keyword: "if", title: "{if:A|=|A|then: |else: }", snippet: "if:A|=|A|then: |else: " },
@@ -123,10 +123,15 @@ export function activate(context: vscode.ExtensionContext) {
         { word: "randonlineid", description : "{randonlineid}", moreInfo: "Gets a random online user id from the server." },
         { word: "len", description : "{len:text}", moreInfo: "Gets the amount of characters in the text." },
         { word: "length", description : "{length:text}", moreInfo: "Gets the amount of characters in the text." },
-        { word: "", description : "", moreInfo: "" },
-        { word: "", description : "", moreInfo: "" },
-        { word: "", description : "", moreInfo: "" },
-        { word: "", description : "", moreInfo: "" },
+        { word: "if", description : "{if:A|=|A|then:rock|else:stone}", moreInfo: "Compares 2 values.\n|else: is optional.\n|=| Equal -- |<| Less than -- |>| Greater than -- |>=| Greater/Equal -- |<=| Less/Equal -- |~| case insensitive version of |=| -- |!=| Not equal" },
+        { word: "randchannel", description : "{randchannel}", moreInfo: "A random channel from the server." },
+        { word: "randchannelid", description : "{randchannelid}", moreInfo: "The ID of a random channel" },
+        { word: "server", description : "{server}", moreInfo: "Server name" },
+        { word: "servercount", description : "{servercount}", moreInfo: "Users on the server" },
+        { word: "serverid", description : "{serverid}", moreInfo: "Server's ID" },
+        { word: "nsfw", description : "{nsfw}", moreInfo: "Mark a tag as NSFW" },
+        { word: "attachtext", description : "{attachtext:text}", moreInfo: "Attaches text into a text file." },
+        { word: "replyuserid", description : "{replyuserid}", moreInfo: "Gets the user id from the message that the user last replied to." },
 
       ];
 
