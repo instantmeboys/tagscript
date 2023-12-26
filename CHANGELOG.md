@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.0.7
+
+- Most hovers added.
+- Improved some autocompletion
+
 ## 0.0.6
 
 - Fixed {get|variable} into {get:variable}
